@@ -1,0 +1,718 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+
+    <title>Quizmania</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../dist/jquery.quiz-min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+      body {
+        min-height: 100vh;
+        /* background-image: url("https://image.freepik.com/free-vector/planet-space-background-flat-design-vector-illustration_35136-182.jpg");
+        background-size: contain; */
+        background-image: linear-gradient(120deg, #182952 0%, #2b3595 100%);
+        font-family: 'Roboto Condensed';
+      }
+
+      .container {
+        margin: 150px auto 30px auto;
+        max-width: 640px;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: 'Bangers', cursive;
+        letter-spacing: 2px;
+        font-size: 72px;
+        background: -webkit-linear-gradient(#7F7FD5, #86A8E7, #91eae4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark navbar-inverse">
+      <a class="navbar-brand" href="#" style="font-family: 'Oleo Script', cursive;">Welcome to our Website..!!</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="study.html" style="font-family: 'Oswald', sans-serif;">STUDY</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html" style="font-family: 'Oswald', sans-serif;">TAKE A QUIZ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 style="font-size: 355%;">Quiz on Discrete Time Signal Processing</h1>
+        <div id="quiz">
+          <div id="quiz-header">
+            <h1 style="background: linear-gradient(to right, #43c6ac, #f8ffae);
+                      -webkit-background-clip: text; 
+                      -webkit-text-fill-color: transparent;">
+                Let us Begin the Quiz
+            </h1>
+            <!-- <p><a id="quiz-home-btn">Home</a></p> -->
+          </div>
+
+          <div id="quiz-start-screen">
+            <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="../dist/jquery.quiz-min.js"></script>
+    <script>
+      $('#quiz').quiz({
+        //resultsScreen: '#results-screen',
+        //counter: false,
+        //homeButton: '#custom-home',
+        counterFormat: 'Question %current of %total',
+        questions: [
+          {
+            'q': 'What is the full form of ECG?',
+            'options': [
+              'Electro Cardiac Graph',
+              'Electrocardiography',
+              'Electrocardiogram',
+              'Electrocardiograph'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the full form of MAC?',
+            'options': [
+            'Media Access Control',
+            'Multiply and Accumulate',
+            'Memory Access Control',
+            'Machine Access Code'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What are the characteristics of Floating Point (32 Bit)?',
+            'options': [
+              'Dynamic Range – much larger, Compiler Efficiency - difficult, Power Consumption – less efficient',
+              'Dynamic Range – much larger, Compiler Efficiency - difficult, Power Consumption – less efficient',
+              'Dynamic Range – much larger, Compiler Efficiency - easier, Power Consumption – more efficient',
+              'Dynamic Range - smaller, Compiler Efficiency - difficult, Power Consumption – less efficient'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What are the applications of DSP?',
+            'options': [
+              'Speech encryption & decryption',
+              'Audio mixing and editing',
+              'Echo Cancellation',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'For a 4 -bit DAC, the least significant bit (LSB) is ________',
+            'options': [
+              '6.25% of full scale',
+              '0.625% of full scale',
+              '12% of full scale',
+              '1.2% of full scale'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the range for fixed point implementation?',
+            'options': [
+              '65536',
+              '65356',
+              '56536',
+              '56356'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the largest floating point number that can be represented using a 32-bit word?',
+            'options': [
+              '3*1038',
+              '1.7*1038',
+              '0.2*1038',
+              '0.3*1038'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If E=0 and M=0, then which of the following statement is true about X?',
+            'options': [
+              'Not a number',
+              'Infinity',
+              'Defined',
+              'Zero'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'The binary digit b-A is called as ______',
+            'options': [
+              'LSB',
+              'Total value',
+              'MSB',
+              'None of the mentioned'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Roll-off factor is',
+            'options': [
+              'The bandwidth occupied beyond the Nyquist Bandwidth of the filter',
+              'The performance of the filter or device',
+              'Aliasing effect',
+              'None of the above'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the smallest floating point number that can be represented using a 32-bit word?',
+            'options': [
+              '3*10-38',
+              '2*10-38',
+              '0.2*10-38',
+              '0.3*10-38'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If 0<E<255, then which of the following statement is true about X?',
+            'options': [
+              'Fractional number',
+              'Infinity',
+              'Mixed number',
+              'Zero'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'For a twos complement representation, the truncation error is ____',
+            'options': [
+              'Always positive',
+              'Always negative',
+              'Zero',
+              'None of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'In DSP processors, which among the following maintains the track of addresses of input data as well as the coefficients stored in data and program memories?',
+            'options': [
+              'Program sequences',
+              'Barrel Shifter',
+              'Data Address Generators (DAGs)',
+              'MAC'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Decimation is a process in which the sampling rate is ____',
+            'options': [
+              'Reduced',
+              'Unpredictable',
+              'Stable',
+              'Enhanced'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'In tapped delay line filter, the tapped line is also known as ____',
+            'options': [
+              'Pick-off node',
+              'Pick-on node',
+              'Pick-up node',
+              'Pick-down node'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Anti-imaging filter with cut-off frequency ωc = π/ I is specifically used ___ upsampling process for the removal of unwanted images.',
+            'options': [
+              'After',
+              'At the time of',
+              'Before',
+              'All of the above'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'How is the sensitivity of filter coefficient quantization for FIR filters?',
+            'options': [
+              'Unpredictable',
+              'High',
+              'Low',
+              'None of these'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which among the following represent/s the characteristic/s of an ideal filter?',
+            'options': [
+              'Linear Phase Response',
+              'Zero gain in stop band',
+              'Constant gain in passband',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'FIR filters ____ :- A. are non-recursive B. do not adopt any feedback C. are recursive D. use feedback',
+            'options': [
+              'A & B',
+              'A & D',
+              'C & D',
+              'B & C'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Telegraph signals are examples of',
+            'options': [
+              'Pulse train',
+              'Impulse signals',
+              'Analog signals',
+              'Digital signals'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following is common independent variable for speech signal, EEG and ECG?',
+            'options': [
+              'Time',
+              'Spatial coordinates',
+              'Pressure',
+              'None of the mentioned'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following conditions made digital signal processing more advantageous over analog signal processing?',
+            'options': [
+              'Flexibility',
+              'Accuracy',
+              'Storage',
+              'All of the mentioned'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which property does y(t)=x(1-t) exhibit?',
+            'options': [
+              'Time scaling',
+              'Time shifting',
+              'Reflecting',
+              'Time shifting and reflecting'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If x(n)=(0,1,2,3,3,0,0,0) then x(2n) is?',
+            'options': [
+              '(0,2,4,6,6,0,0,0)',
+              '(0,1,2,3,3,0,0,0)',
+              '(0,2,3,0,0,0,0,0)',
+              'None of the mentioned'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If x(n)=(0,0,1,2,3,4,0,0) then x(n-2) is?',
+            'options': [
+              '(0,0,2,4,6,8,0,0)',
+              '(0,0,1,2,3,4,0,0)',
+              '(1,2,3,4,0,0,0,0)',
+              '(0,0,0,0,1,2,3,4)'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If x(n)=(0,0,1,1,1,1,1,0) then x(3n+1) is?',
+            'options': [
+              '(0,1,0,0,0,0,0,0)',
+              '(0,0,1,1,1,1,0,0)',
+              '(1,1,0,0,0,0,0,0)',
+              'None of the mentioned'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If a signal x(t) is processed through a system to obtain the signal (x(t)2), then the system is said to be ____',
+            'options': [
+              'Linear',
+              'Non-linear',
+              'Exponential',
+              'None of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What are the important block(s) required to process an input analog signal to get an output analog signal?',
+            'options': [
+              'A/D converter',
+              'Digital signal processor',
+              'D/A converter',
+              'All of the mentioned'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following block is not required in digital processing of a RADAR signal?',
+            'options': [
+              'A/D converter',
+              'D/A converter',
+              'DSP',
+              'All of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following wave is known as “amplitude modulated wave” of x(t)?',
+            'options': [
+              'C.x(t) (where C is a constant)',
+              'x(t)+y(t)',
+              'x(t).y(t)',
+              'dx(t)/dt'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the physical device that performs an operation on the signal?',
+            'options': [
+              'Signal source',
+              'System',
+              'Medium',
+              'None of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'In D/A converter, the application of the input code word results in a high-amplitude transient, called?',
+            'options': [
+              'Glitch',
+              'Deglitch',
+              'Glitter',
+              'None of the mentioned'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the term used to describe the range of an A/D converter for bipolar signals?',
+            'options': [
+              'Full scale',
+              'FSR',
+              'Full-scale region',
+              'FS'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'The time required to complete the conversion of Analog to Digital is ____ the duration of the hold mode of S/H.',
+            'options': [
+              'Greater than',
+              'Equals to',
+              'Less than',
+              'Greater than or Equals to'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the process of down sampling called?',
+            'options': [
+              'Decimation',
+              'Fornication',
+              'Both Decimation & Fornication',
+              'None of the mentioned'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What is the mantissa and exponent respectively obtained when we add 5 and 3/8 in binary float point representation?',
+            'options': [
+              '0.101010,011',
+              '0.101000,011',
+              '0.101011,011',
+              '0.101011,101'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'As compared to the analog systems, the digital processing of signals allows: 1) Programmable operations 2) Flexibility in the system design 3) Cheaper systems 4) More reliability',
+            'options': [
+              '1, 2 and 3 are correct',
+              '1 and 2 are correct',
+              '1, 2 and 4 are correct',
+              'All the four are correct'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Why is Harvard Architecture best suited for DSP?',
+            'options': [
+              'They provide greater bandwidth',
+              'They provide more predictable bandwidth',
+              'many signal and image processing applications require fast, real-time machines',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Why is floating point better than fixed point?',
+            'options': [
+              'High-Volume',
+              'Cheap',
+              'Dynamic Range',
+              'Both a and b'
+            ],
+            'correctIndex': 2,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': ' Why is DSP Processor better than GPP?',
+            'options': [
+              'Large Memory',
+              'Low Power Consumption',
+              'Expensive',
+              'Sequential Execution'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following is the correct representation of a floating-point number X?',
+            'options': [
+              '2^E',
+              'M.2^E(1/2<M<1)',
+              '2M.2^E(1/2<M<1)',
+              'None of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If E=255 and M≠0, then which of the following statement is true about X?',
+            'options': [
+              'Not a number',
+              'Infinity',
+              'Defined',
+              'Zero'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Assume number is using 32-bit format which reserve 1 bit for the sign, 15 bits for the integer part and 16 bits for the fractional part, then -43.625 is represented as:',
+            'options': [
+              '1 000000000101011 1010000000000000',
+              '1 000000000101101 1011000000000000',
+              '1 000000000010111 0101000000000000',
+              '1 000000000110101 0110000000000000'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'In C6X processor, which external device/s get/s acquire/s an interface support by EMIF peripheral?',
+            'options': [
+              'Synchronous burst',
+              'Asynchronous devices',
+              'Externally shared memory devices',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Justify the need of Digital Signal Processor.',
+            'options': [
+              'Performs multiplication in single cycle ',
+              'Smaller size',
+              'Processing of many “high” frequency signals in real-time.',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'What are the important block(s) required to process an input analog signal to get an output analog signal?',
+            'options': [
+              'A/D converter',
+              'Digital signal processor',
+              'D/A converter',
+              'All of the mentioned'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'If a signal x(t) is processed through a system to obtain the signal (x(t)2), then the system is said to be ____',
+            'options': [
+              'Linear',
+              'Non-linear',
+              'Exponential',
+              'None of the mentioned'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Which of the following is common independent variable for speech signal, EEG and ECG?',
+            'options': [
+              'Time',
+              'Spatial coordinates',
+              'Pressure',
+              'None of the mentioned'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          },
+          {
+            'q': 'Why is Harvard Architecture best suited for DSP?',
+            'options': [
+              'They provide greater bandwidth',
+              'They provide more predictable bandwidth',
+              'many signal and image processing applications require fast, real-time machines',
+              'All of the above'
+            ],
+            'correctIndex': 3,
+            'correctResponse': 'Correct Response.',
+            'incorrectResponse': 'Incorrect Response.'
+          }
+        ]
+      });
+
+      var randomques = Math.floor(Math.random() * questions.length);
+      </script>
+  </body>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</html>
